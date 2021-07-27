@@ -12,9 +12,18 @@ function onTodoSubmit(event) {
 function paintTodo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  li.appendChild(span);
   span.innerText = newTodo;
+  const button = document.createElement("button");
+  button.innerText = "❌";
+  button.addEventListener("click", deleteTodo);
+  li.appendChild(span);
+  li.appendChild(button);
   todoList.appendChild(li);
+}
+
+function deleteTodo(event) {
+  const li = event.target.parentElement;
+  li.remove();
 }
 
 todoForm.addEventListener("submit", onTodoSubmit);
