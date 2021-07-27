@@ -8,6 +8,7 @@
     <title>To-doist App</title>
   </head>
   <body>
+    <h2 class="clock"></h2>
     <form class="login-form hidden">
       <input
         type="text"
@@ -17,8 +18,13 @@
       />
       <button>Log in</button>
     </form>
-    <h2 class="clock"></h2>
     <h1 class="hidden greeting">Hello nice to meet you</h1>
+
+    <form action="" id="todo-form">
+      <input type="text" required placeholder="Write a To Do and Press Enter" />
+    </form>
+    <ul id="todo-list"></ul>
+
     <div class="quote">
       <span></span>
       <span></span>
@@ -28,5 +34,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
