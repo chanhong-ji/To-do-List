@@ -10,15 +10,20 @@ function onTodoSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
-  paintTodo(newTodo);
-  todos.push(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  todos.push(newTodoObj);
+  paintTodo(newTodoObj);
   saveTodos();
 }
 
-function paintTodo(newTodo) {
+function paintTodo(newTodoObj) {
   const li = document.createElement("li");
+  li.id = newTodoObj.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodoObj.text;
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteTodo);
@@ -29,7 +34,9 @@ function paintTodo(newTodo) {
 
 function deleteTodo(event) {
   const li = event.target.parentElement;
+  todos = todos.filter((todo) => todo.id !== parseInt(li.id));
   li.remove();
+  saveTodos();
 }
 
 function saveTodos() {
