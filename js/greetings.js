@@ -1,6 +1,7 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = loginForm.querySelector("input");
 const greeting = document.querySelector("h1");
+const goTodo = document.getElementById("go-todo");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USER_KEY = "username";
@@ -11,6 +12,7 @@ function onLoginSubmit(event) {
   const newUsername = loginInput.value;
   localStorage.setItem(USER_KEY, newUsername);
   paintGreeting(newUsername);
+  goTodo.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function paintGreeting(username) {
@@ -25,4 +27,5 @@ if (savedUsername === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGreeting(savedUsername);
+  goTodo.classList.remove(HIDDEN_CLASSNAME);
 }

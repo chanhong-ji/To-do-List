@@ -1,0 +1,116 @@
+body {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.bgimg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  height: 100vh;
+  width: 100vw;
+  /* 그림이 구겨지지 않게 하는 법. */
+  flex-wrap: wrap;
+}
+.black-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.index-clock {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: flex-end;
+  font-size: 200px;
+  text-shadow: 0 0 4px;
+}
+
+.white-line {
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  margin-top: 20px;
+  opacity: 0.4;
+}
+
+.greeting {
+  display: flex;
+  height: 15%;
+  align-items: center;
+  font-size: 50px;
+}
+
+.go-todo__btn {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px -5px;
+}
+
+.quote {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  text-align: center;
+}
+.quote span:first-child {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.quote span:nth-child(2) {
+  font-style: italic;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.login-form input {
+  width: 75%;
+  background: none;
+  font-size: 35px;
+  padding: 20px 10px;
+  border: none;
+  border-bottom: 2px solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  text-align: center;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.login-form button {
+  background: none;
+  border: none;
+  box-shadow: 0 0 10px -5px;
+  color: white;
+  font-size: 23px;
+  width: auto;
+  margin-top: 20px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}

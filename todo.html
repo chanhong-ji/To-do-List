@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To-doist</title>
+  </head>
+  <body class="todo-body">
+    <!-- 배경화면 -->
+    <img class="todo-bgimg" src="todo-back.jpg" alt="" />
+
+    <!-- 탑바 독립적으로 존재.  -->
+    <div class="top-bar">
+      <div class="top-bar__color-boxes">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="top-bar__right-box">
+        <div class="top-bar__icons">
+          <span><i class="fas fa-battery-three-quarters"></i></span>
+          <span><i class="fas fa-wifi"></i></span>
+          <span><i class="fas fa-search"></i></span>
+          <span><i class="fas fa-ellipsis-h"></i></span>
+        </div>
+        <div class="top-bar__now">
+          <span class="day"></span>
+          <span class="time"></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="window-box">
+      <!-- notion-bar -->
+      <header class="title-bar">
+        <span class="title"></span>
+        <div class="where"></div>
+        <div class="title-bar__icons">
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="fas fa-paint-brush fa-lg"></i></span>
+          <span><i class="far fa-share-square fa-lg"></i></span>
+        </div>
+      </header>
+
+      <!-- 첫번째 섹션 -->
+      <section class="main-box">
+        <!-- 캘린더 -->
+
+        <!-- 메모장 -->
+        <div id="memo-note">
+          <span></span>
+        </div>
+
+        <!-- 최근들은 음악 -->
+
+        <!-- 오늘의 big 3 -->
+      </section>
+
+      <section class="main-box">
+        <form action="" id="today-big3-form">
+          <input type="text" required />
+        </form>
+        <ul id="today-big3-list"></ul>
+      </section>
+      <!-- 투두이스트 -->
+      <section class="main-box">
+        <form action="" id="todo-form">
+          <input
+            type="text"
+            required
+            placeholder="Write a To Do and Press Enter"
+          />
+        </form>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <section class="main-box"></section>
+    </div>
+    <script src="js/todo.js"></script>
+    <script src="js/day.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/title.js"></script>
+    <script src="js/weather.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
