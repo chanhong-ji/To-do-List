@@ -34,10 +34,9 @@
     </div>
 
     <div class="window-box">
-      <!-- notion-bar -->
       <header class="title-bar">
-        <span class="title"></span>
-        <div class="weather">
+        <span class="title-bar__title"></span>
+        <div class="title-bar__weather">
           <span></span>
           <span></span>
         </div>
@@ -45,8 +44,11 @@
           <span><i class="fas fa-search fa-lg"></i></span>
           <span><i class="fas fa-paint-brush fa-lg"></i></span>
           <span><i class="far fa-share-square fa-lg"></i></span>
+          <span><i class="fas fa-ellipsis-h fa-lg"></i></span>
         </div>
       </header>
+
+      <nav class="side-bar"></nav>
 
       <!-- 첫번째 섹션 -->
       <section class="main-box">
@@ -62,14 +64,74 @@
         <!-- 오늘의 big 3 -->
       </section>
 
+      <!-- 두번째 박스 -->
       <section class="main-box">
-        <form action="" id="today-big3-form">
+        <ul class="music-box">
+          <li class="music-list">
+            <!-- <div class="music-list__cover">
+            </div> -->
+            <img class="music-list__cover" src="img/11.jfif" alt="" />
+
+            <div class="music-list__info">
+              <span class="music-list__title">Modern Times</span>
+              <span class="music-list__author hidden">IU</span>
+            </div>
+          </li>
+          <li class="music-list">
+            <!-- <div class="music-list__cover"></div> -->
+            <img class="music-list__cover" src="img/14.jfif" alt="" />
+
+            <div class="music-list__info">
+              <span class="music-list__title">Love Poem</span>
+              <span class="music-list__author hidden">IU</span>
+            </div>
+          </li>
+          <li class="music-list">
+            <!-- <div class="music-list__cover"></div> -->
+            <img class="music-list__cover" src="img/13.jfif" alt="" />
+            <div class="music-list__info">
+              <span class="music-list__title">Chat Shire</span>
+              <span class="music-list__author hidden">IU</span>
+            </div>
+          </li>
+          <li class="music-list">
+            <!-- <div class="music-list__cover"></div> -->
+            <img class="music-list__cover" src="img/12.jfif" alt="" />
+
+            <div class="music-list__info">
+              <span class="music-list__title">Lilac</span>
+              <span class="music-list__author hidden">IU</span>
+            </div>
+          </li>
+        </ul>
+        <div class="play-box">
+          <!-- <div class="play-box__cover"> -->
+          <!-- 자바스크립트 -->
+          <!-- </div> -->
+          <img src="" alt="" class="play-box__cover" />
+          <div class="play-box__info">
+            <span>title</span>
+            <span>author</span>
+          </div>
+          <div class="play-box__bar">
+            <span>
+              <!-- <i class="fas fa-play fa-lg"></i> -->
+              <i class="fas fa-stop-circle fa-lg"></i>
+            </span>
+            <span><i class="fas fa-step-forward fa-lg"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 세번째 박스 -->
+      <section class="main-box">
+        <!-- today big 3 -->
+        <!-- <form action="" id="today-big3-form">
           <input type="text" required />
         </form>
-        <ul id="today-big3-list"></ul>
-      </section>
-      <!-- 투두이스트 -->
-      <section class="main-box">
+        <ul id="today-big3-list"></ul> -->
+
+        <!-- todo-ist -->
         <form action="" id="todo-form">
           <input
             type="text"
@@ -80,13 +142,15 @@
         <ul id="todo-list"></ul>
       </section>
 
+      <!-- 네번째 박스 -->
       <section class="main-box"></section>
     </div>
     <script src="js/todo.js"></script>
     <script src="js/day.js"></script>
     <script src="js/time.js"></script>
     <script src="js/title.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/music-box.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
 
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"

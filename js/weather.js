@@ -1,4 +1,8 @@
 const API_KEY = "2b89b3a51447d57d60c4526743ed54f3";
+// const weatherList = ["clear", "wind", "clouds", "rain", "snow"];
+// const weatherIconList = [
+
+// ]
 
 function onGeoOk(position) {
   //   console.log(position);
@@ -8,12 +12,20 @@ function onGeoOk(position) {
   fetch(url)
     .then((reponse) => reponse.json())
     .then((data) => {
-      const weatherCity = document.querySelector(".weather span:first-child");
+      const weatherCity = document.querySelector(
+        ".title-bar__weather span:first-child"
+      );
       const weatherWeather = document.querySelector(
-        ".weather span:nth-child(2)"
+        ".title-bar__weather span:nth-child(2)"
       );
       weatherCity.innerText = data.name;
       weatherWeather.innerText = data.weather[0].main;
+      // for (let i = 0; i < weatherList.length; i++) {
+      //   const nowWeather = weatherList[i];
+      //   if (data.weather[0].main === nowWeather) {
+
+      //   }
+      // }
     });
 }
 
