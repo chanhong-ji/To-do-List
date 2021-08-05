@@ -33,7 +33,7 @@ function paintMusicList(musicList) {
 }
 
 function playBoxChange(currMusicList) {
-  playboxCover.src = currMusicList.childNodes[3].currentSrc;
+  playboxCover.src = currMusicList.childNodes[1].currentSrc;
   playboxTitle.innerText = currMusicList.innerText;
   playboxAuthor.innerText = currMusicList.querySelector(
     ".music-list__author"
