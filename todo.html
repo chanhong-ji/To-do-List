@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>To-doist</title>
+    <title>todo</title>
   </head>
   <body class="todo-body">
     <!-- 배경화면 -->
@@ -115,6 +115,27 @@
 
       <!-- 세번째 박스 -->
       <section class="main-box">
+        <div class="small-box">
+          <div class="todo__top">
+            <i class="fas fa-check fa-lg"></i>
+            <span>To Do</span>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="todo-box">
+            <div class="todo-box__control-bar">
+              <i class="far fa-list-alt fa-lg"></i>
+              <span></span>
+              <button><i class="fas fa-plus"></i></button>
+            </div>
+            <form class="todo-box__form hidden">
+              <input type="text" required placeholder="Title of Todo" />
+              <input type="text" placeholder="Detail" />
+              <button><i class="fas fa-check"></i></button>
+            </form>
+            <ul class="todo-box__lists"></ul>
+          </div>
+        </div>
+
         <!-- today big 3 -->
         <!-- <form action="" id="today-big3-form">
           <input type="text" required />
@@ -135,7 +156,7 @@
       <!-- 네번째 박스 -->
       <section class="main-box"></section>
     </div>
-    <script src="js/todo.js"></script>
+    <script src="js/todo-box.js"></script>
     <script src="js/day.js"></script>
     <script src="js/time.js"></script>
     <script src="js/title.js"></script>
