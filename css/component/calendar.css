@@ -1,0 +1,39 @@
+.calendar {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 90%;
+  height: 47%;
+  border-radius: 30px;
+}
+
+.calendar__top-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  font-size: 25px;
+  color: #285782;
+  font-weight: 500;
+}
+.calendar__top-bar i {
+  opacity: 0.7;
+}
+.calendar__top-bar i:hover {
+  opacity: 1;
+}
+
+.calendar__box {
+  margin-left: 12px;
+}
+.calendar__box > div {
+  display: flex;
+}
+
+.calendar__box div div {
+  width: 40px;
+  height: 40px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

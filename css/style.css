@@ -9,8 +9,8 @@
 @import "component/side-bar.css";
 @import "component/main-box.css";
 @import "component/main-box_2.css";
-@import "component/main-box_3.css";
 @import "component/todobox.css";
+@import "component/calendar.css";
 
 @import "screen/index.css";
 @import "screen/todo.css";

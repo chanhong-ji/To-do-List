@@ -53,6 +53,14 @@
       <!-- 첫번째 섹션 -->
       <section class="main-box">
         <!-- 캘린더 -->
+        <div class="calendar">
+          <div class="calendar__top-bar">
+            <i class="fas fa-arrow-left fa"></i>
+            <span></span>
+            <i class="fas fa-arrow-right fa"></i>
+          </div>
+          <div class="calendar__box"></div>
+        </div>
 
         <!-- 메모장 -->
         <div id="memo-note">
@@ -141,21 +149,12 @@
           <input type="text" required />
         </form>
         <ul id="today-big3-list"></ul> -->
-
-        <!-- todo-ist -->
-        <form action="" id="todo-form">
-          <input
-            type="text"
-            required
-            placeholder="Write a To Do and Press Enter"
-          />
-        </form>
-        <ul id="todo-list"></ul>
       </section>
 
       <!-- 네번째 박스 -->
       <section class="main-box"></section>
     </div>
+    <script src="js/calendar.js"></script>
     <script src="js/todo-box.js"></script>
     <script src="js/day.js"></script>
     <script src="js/time.js"></script>

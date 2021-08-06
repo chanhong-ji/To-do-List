@@ -4,7 +4,7 @@ const TodoDate = document.querySelector(
 );
 
 const date = new Date();
-TodoDate.innerText = `${date.getMonth()} / ${date.getDate()}`;
+TodoDate.innerText = `${date.getMonth() + 1} / ${date.getDate()}`;
 
 // todo-box__lists
 const todoForm = document.querySelector(".todo-box__form");
