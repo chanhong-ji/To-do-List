@@ -8,9 +8,12 @@
 
 .calendar__top-bar {
   display: flex;
-  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0 20px;
+  justify-content: space-between;
   align-items: center;
   height: 50px;
+  width: 100%;
   font-size: 25px;
   color: #285782;
   font-weight: 500;
@@ -37,4 +40,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.calendar__box div:first-child {
+  font-weight: 500;
+}
+
+.calendar__box div:first-child div:first-child {
+  color: red;
+}
+.calendar__box div:first-child div:last-child {
+  color: rgb(12, 12, 216);
 }
