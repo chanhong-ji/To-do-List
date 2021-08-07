@@ -13,7 +13,8 @@
   width: 100%;
   box-sizing: border-box;
   height: 10px;
-  padding: 20px 20px;
+  padding: 20px;
+  padding-right: 10px;
 }
 .todo__top i {
   color: #106590;
@@ -21,7 +22,7 @@
 }
 .todo__top span {
   display: inline-block;
-  width: 80%;
+  width: 75%;
   padding-left: 3px;
   font-size: 20px;
   font-weight: 600;
@@ -40,16 +41,18 @@
   height: 360px;
   padding: 10px 20px;
   position: relative;
+  margin-top: 5px;
   /* background-color: rgba(255, 255, 255, 0.8); */
 }
 
 .todo-box__control-bar {
   display: flex;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-size: 20px;
   align-items: center;
   margin-bottom: 10px;
+  margin-left: 30px;
 }
 
 .todo-box__control-bar > i {
@@ -58,7 +61,6 @@
 }
 .todo-box__control-bar span {
   display: inline-block;
-  padding-right: 55%;
   font-weight: 800;
   opacity: 0.6;
 }
