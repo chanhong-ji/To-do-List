@@ -15,7 +15,8 @@
 }
 
 .window-box {
-  width: 80%;
+  /* width: 80%; */
+  width: 1530px;
   height: 85%;
   border-radius: 20px;
   box-shadow: 0 0 100px -50px black;
