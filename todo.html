@@ -14,12 +14,13 @@
     <script defer src="js/music-box.js"></script>
     <script defer src="js/search.js"></script>
     <script defer src="js/weather.js"></script>
+    <script defer src="js/dday.js"></script>
   </head>
   <body class="todo-body">
     <!-- 배경화면 -->
     <img class="todo-bgimg" src="todo-back.jpg" alt="" />
 
-    <!-- 탑바 독립적으로 존재.  -->
+    <!-- 탑바 -->
     <div class="top-bar">
       <div class="top-bar__color-boxes">
         <div></div>
@@ -189,17 +190,18 @@
         </div>
         <div class="small-box">
           <div class="small-box__top">
-            <i class="far fa-clipboard fa-lg"></i>
-            <span>Memo</span>
+            <i class="fas fa-calendar-day fa-lg"></i>
+            <span>D-day</span>
           </div>
-          <div class="memo-box"></div>
+          <div class="dday-box">
+            <form class="dday-form" action="">
+              <input type="text" required placeholder="Title" />
+              <input type="date" required />
+              <button><i class="fas fa-arrow-down"></i></button>
+            </form>
+            <ul class="dday-lists"></ul>
+          </div>
         </div>
-
-        <!-- today big 3 -->
-        <!-- <form action="" id="today-big3-form">
-          <input type="text" required />
-        </form>
-        <ul id="today-big3-list"></ul> -->
       </section>
 
       <!-- 네번째 박스 -->

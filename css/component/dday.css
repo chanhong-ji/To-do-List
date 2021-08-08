@@ -1,0 +1,83 @@
+.small-box:nth-child(2) {
+  height: 40%;
+  margin-top: 25px;
+}
+
+.dday-box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  height: 73%;
+}
+
+.dday-form {
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 0 20px -8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dday-form input {
+  width: 25%;
+  background: none;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.335);
+  font-size: 18px;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+}
+.dday-form input:nth-child(2) {
+  width: 50%;
+  font-size: 16px;
+}
+.dday-form button {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px -2px;
+  color: rgba(0, 0, 0, 0.651);
+}
+
+.dday-lists {
+  margin-top: 10px;
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+}
+.dday-lists::-webkit-scrollbar {
+  display: none;
+}
+
+.dday-lists li {
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.dday-lists li span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.dday-lists li span:first-child {
+  margin-left: 30px;
+  width: 45%;
+}
+
+.dday-lists li span:nth-child(3) {
+  position: absolute;
+  right: 20px;
+}
