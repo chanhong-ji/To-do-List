@@ -12,7 +12,7 @@ ddayInputDate.value = `${ddayToday.getFullYear()}-${String(
 const ddayForm = document.querySelector(".dday-form");
 const ddayLists = document.querySelector(".dday-lists");
 const ddayTitle = ddayForm.querySelector("input:first-child");
-const ddayDate = ddayForm.querySelector("input:last-child");
+const ddayDate = ddayForm.querySelector("input:nth-child(2)");
 const colors = [
   "#ef577780",
   "#575fcf80",
