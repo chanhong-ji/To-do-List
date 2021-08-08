@@ -3,6 +3,10 @@
 @import "reset.css";
 @import "variable.css";
 
+/* screen */
+@import "screen/index.css";
+@import "screen/todo.css";
+
 /* component */
 @import "component/top-bar.css";
 @import "component/title-bar.css";
@@ -13,9 +17,7 @@
 @import "component/calendar.css";
 @import "component/weather.css";
 @import "component/memo.css";
-
-@import "screen/index.css";
-@import "screen/todo.css";
+@import "component/search.css";
 
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

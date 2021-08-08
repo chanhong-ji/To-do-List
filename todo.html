@@ -12,6 +12,7 @@
     <script defer src="js/time.js"></script>
     <script defer src="js/title.js"></script>
     <script defer src="js/music-box.js"></script>
+    <script defer src="js/search.js"></script>
     <script defer src="js/weather.js"></script>
   </head>
   <body class="todo-body">
@@ -192,7 +193,19 @@
       </section>
 
       <!-- 네번째 박스 -->
-      <section class="main-box"></section>
+      <section class="main-box">
+        <div class="small-box search">
+          <div class="small-box__top search-box__top fa-lg">
+            <i class="fas fa-search"></i>
+            <span>Google</span>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <form class="search-form">
+            <input type="text" placeholder="Search the web" />
+          </form>
+          <a href="https://google.com/">Go to google</a>
+        </div>
+      </section>
     </div>
 
     <script
