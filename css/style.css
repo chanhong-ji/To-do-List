@@ -12,6 +12,7 @@
 @import "component/todobox.css";
 @import "component/calendar.css";
 @import "component/weather.css";
+@import "component/memo.css";
 
 @import "screen/index.css";
 @import "screen/todo.css";

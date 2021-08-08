@@ -9,18 +9,18 @@
   box-sizing: border-box;
 }
 
-.todo__top {
+.small-box__top {
   width: 100%;
   box-sizing: border-box;
   height: 10px;
   padding: 20px;
   padding-right: 10px;
 }
-.todo__top i {
+.small-box__top i {
   color: #106590;
   opacity: 0.7;
 }
-.todo__top span {
+.small-box__top span {
   display: inline-block;
   width: 75%;
   padding-left: 3px;
@@ -28,7 +28,7 @@
   font-weight: 600;
   opacity: 0.6;
 }
-.todo__top i:last-child {
+.small-box__top i:last-child {
   opacity: 0.5;
 }
 

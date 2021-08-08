@@ -96,7 +96,7 @@ function showForm() {
 formPlusBtn.addEventListener("click", showForm);
 
 // on click exchange Btn
-const todoTop = document.querySelector(".todo__top");
+const todoTop = document.querySelector(".small-box__top");
 const todoTopSpan = todoTop.querySelector("span");
 const exchangeBtn = todoTop.querySelector("i:last-child");
 
