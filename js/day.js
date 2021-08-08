@@ -1,6 +1,6 @@
 const todayDate = document.querySelector(".day");
 const monthList = [
-  "Jen",
+  "Jan",
   "Feb",
   "Mar",
   "Apl",
@@ -21,9 +21,7 @@ function todayDateUpdate() {
   const month = today.getMonth();
   const date = today.getDate();
   const day = today.getDay();
-  todayDate.innerText = `${dayList[day]}  ${
-    monthList[month - 1]
-  }      ${date} ${year}`;
+  todayDate.innerText = `${dayList[day]} ${monthList[month]} ${date} ${year}`;
 }
 
 todayDateUpdate();

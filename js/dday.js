@@ -7,8 +7,6 @@ ddayInputDate.value = `${ddayToday.getFullYear()}-${String(
   ddayToday.getMonth() + 1
 ).padStart(2, "0")}-${String(ddayToday.getDate()).padStart(2, "0")}`;
 
-// 리스트 만들기
-
 const ddayForm = document.querySelector(".dday-form");
 const ddayLists = document.querySelector(".dday-lists");
 const ddayTitle = ddayForm.querySelector("input:first-child");
@@ -46,7 +44,9 @@ function submitDdayForm(event) {
     id: Date.now(),
   };
   ddayTitle.value = "";
-  ddayDate.value = "";
+  ddayDate.value = `${ddayToday.getFullYear()}-${String(
+    ddayToday.getMonth() + 1
+  ).padStart(2, "0")}-${String(ddayToday.getDate()).padStart(2, "0")}`;
   ddays.push(newDdayObj);
   paintDday(newDdayObj);
   saveDdays();

@@ -86,6 +86,10 @@ if (savedTodos) {
   todos = parsedTodos;
   todos.forEach(paintTodo);
 }
+if (savedCompletedTodos) {
+  const parsedCompletedTodos = JSON.parse(savedCompletedTodos);
+  completedTodos = parsedCompletedTodos;
+}
 
 // todo btn
 const formPlusBtn = document.querySelector(".todo-box button");
@@ -99,17 +103,6 @@ formPlusBtn.addEventListener("click", showForm);
 const todoTop = document.querySelector(".small-box__top");
 const todoTopSpan = todoTop.querySelector("span");
 const exchangeBtn = todoTop.querySelector("i:last-child");
-
-// 클릭하면 내용물도 완전히 바뀌고.
-// 제목도 바뀐다.
-// 그리고 다시클릭하면 원래대로 돌아가도록 만들어야 하는데..
-// 다시 클릭했을 때는, 간단하게 paint saved 로 할 수 있을 거 같고.
-// 즉 해당 버튼을 클릭하면 두가지 동작이 생기는 거지.
-// 한번은 painttodos고 하나는 completedtodo
-
-// completed 의 content 는 그동안 쌓아놓은
-// completedtodos 를 그대로 깔기만하면 돼.
-// 모든 todos 항목에 each 깔고 paint 함수 적용.
 
 exchangeBtn.addEventListener("click", exchangeLists);
 
@@ -146,7 +139,7 @@ function paintCompletedTodo(completedtodoObj) {
 
 function deleteCompletedTodo(event) {
   const li = event.target.parentElement.parentElement;
-  completedTodos = completedTodos.filter((todo) => todo.li !== parseInt(li.id));
-  saveCompletedTodos;
+  completedTodos = completedTodos.filter((todo) => todo.id !== parseInt(li.id));
+  saveCompletedTodos();
   li.remove();
 }

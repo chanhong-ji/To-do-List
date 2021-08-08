@@ -40,7 +40,7 @@ function onGeoError() {
 }
 
 function paintWeather(lat, lon) {
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
   fetch(url)
     .then((reponse) => reponse.json())
     .then((data) => {
@@ -95,19 +95,17 @@ function toCelsius(temp) {
 }
 
 if (savedGeolocation) {
-  //저장된 정보가 있다면 바로, 장소를 묻지 않고 바로 paintWeather...로 가고 싶은데.
   const parsedGeolocation = JSON.parse(savedGeolocation);
   paintWeather(parsedGeolocation.lat, parsedGeolocation.lon);
 } else {
   navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }
+// navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
 resetBtn.addEventListener("click", () => {
   savedGeolocation = null;
   navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 });
-
-// weather.desciption, wind.speed, main.pressure(hPa) ,visivility (m -> km)
 
 const weatherBtn = document.querySelector(".weather-btn");
 const weatherFull = document.querySelector(".weather-full");
