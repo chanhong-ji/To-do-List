@@ -12,7 +12,7 @@
     <script defer src="js/time.js"></script>
     <script defer src="js/title.js"></script>
     <script defer src="js/music-box.js"></script>
-    <!-- <script defer src="js/weather.js"></script> -->
+    <script defer src="js/weather.js"></script>
   </head>
   <body class="todo-body">
     <!-- 배경화면 -->
@@ -65,14 +65,44 @@
           <div class="calendar__box"></div>
         </div>
 
-        <!-- 메모장 -->
-        <div id="memo-note">
-          <span></span>
+        <!-- weather -->
+        <div class="weather">
+          <div class="weather__top-bar">
+            <i class="fas fa-cloud-sun"></i>
+            <span>Weather</span>
+          </div>
+          <div class="weather__place">
+            <i class="fas fa-map-marker-alt"></i>
+            <span></span>
+          </div>
+          <div class="weather-box">
+            <span class="weather-box__icon"></span>
+            <span class="weather-box__temp"></span>
+            <div class="weather-box__info">
+              <span></span>
+              <div>
+                <i class="fas fa-tint"></i>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <button class="weather-btn">See full forecast</button>
+        </div>
+        <div class="weather-full hidden">
+          <div class="weather-full__column">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="weather-full__column">
+            <span></span>
+            <span></span>
+          </div>
         </div>
 
-        <!-- 최근들은 음악 -->
-
-        <!-- 오늘의 big 3 -->
+        <!-- 메모장 -->
+        <!-- <div id="memo-note">
+          <span></span>
+        </div> -->
       </section>
 
       <!-- 두번째 박스 -->
