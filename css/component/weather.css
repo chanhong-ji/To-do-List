@@ -24,6 +24,11 @@
   color: #0476a0;
 }
 
+.weather__top-bar i:last-child {
+  padding-left: 100px;
+  color: rgba(0, 0, 0, 0.377);
+}
+
 .weather__place {
   display: flex;
   justify-content: center;
@@ -49,7 +54,6 @@
   font-size: 60px;
   opacity: 0.5;
   margin-left: 20px;
-  color: skyblue;
 }
 .weather-box__temp {
   margin-left: 10px;
@@ -67,6 +71,10 @@
   height: 40px;
   font-size: 15px;
   font-weight: 500;
+}
+
+.weather-box__info i {
+  color: rgb(53, 164, 255);
 }
 
 .weather-btn {

@@ -1,28 +1,53 @@
 const API_KEY = "2b89b3a51447d57d60c4526743ed54f3";
+const resetBtn = document.querySelector(".weather__top-bar i:last-child");
 
-function Weather(name, icon) {
+function Weather(name, icon, color) {
   this.name = name;
   this.icon = icon;
+  this.color = color;
 }
+
 const weatherList = [];
-weatherList.push(new Weather("Clear", '<i class="far fa-sun"></i>'));
-weatherList.push(new Weather("Wind", '<i class="fas fa-wind"></i>'));
-weatherList.push(new Weather("Clouds", '<i class="fas fa-cloud"></i>'));
-weatherList.push(new Weather("Rain", '<i class="fas fa-cloud-rain"></i>'));
-weatherList.push(new Weather("Snow", '<i class="far fa-snowflake"></i>'));
+weatherList.push(new Weather("Clear", '<i class="far fa-sun"></i>', "#ffd900"));
+weatherList.push(new Weather("Wind", '<i class="fas fa-wind"></i>', "#165db5"));
+weatherList.push(
+  new Weather("Clouds", '<i class="fas fa-cloud"></i>', "#269af2")
+);
+weatherList.push(
+  new Weather("Rain", '<i class="fas fa-cloud-rain"></i>', "#269af2")
+);
+weatherList.push(
+  new Weather("Snow", '<i class="far fa-snowflake"></i>', "#79cfdc")
+);
+
+let savedGeolocation = localStorage.getItem("savedGeolocation");
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
+  savedGeolocation = {
+    lat: lat,
+    lon: lon,
+  };
+  localStorage.setItem("savedGeolocation", JSON.stringify(savedGeolocation));
+  paintWeather(lat, lon);
+}
+
+function onGeoError() {
+  alert(
+    "Can't find you. If you allow your position, you can see the beautiful weather icon"
+  );
+}
+
+function paintWeather(lat, lon) {
   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
   fetch(url)
     .then((reponse) => reponse.json())
     .then((data) => {
-      // 세부정보
-      console.dir(data);
       const weatherCity = document.querySelector(
         ".weather__place span:last-child"
       );
+      const weatherIcon = document.querySelector(".weather-box__icon ");
       const weatherWeather = document.querySelector(
         ".weather-box span:first-child"
       );
@@ -45,8 +70,10 @@ function onGeoOk(position) {
       const weatherFull4 = document.querySelector(
         ".weather-full__column:last-child span:last-child"
       );
-      // 코드
       weatherCity.innerText = `${data.name}, ${data.sys.country}`;
+      weatherIcon.style.color = weatherList.find(
+        (weather) => weather.name == data.weather[0].main
+      ).color;
       weatherWeather.innerHTML = weatherList.find(
         (weather) => weather.name == data.weather[0].main
       ).icon;
@@ -63,17 +90,22 @@ function onGeoOk(position) {
     });
 }
 
-function onGeoError() {
-  alert(
-    "Can't find you. If you allow your posotion, you can see the beautiful weather icon"
-  );
-}
-
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-
 function toCelsius(temp) {
   return temp - 273.15;
 }
+
+if (savedGeolocation) {
+  //저장된 정보가 있다면 바로, 장소를 묻지 않고 바로 paintWeather...로 가고 싶은데.
+  const parsedGeolocation = JSON.parse(savedGeolocation);
+  paintWeather(parsedGeolocation.lat, parsedGeolocation.lon);
+} else {
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+}
+
+resetBtn.addEventListener("click", () => {
+  savedGeolocation = null;
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+});
 
 // weather.desciption, wind.speed, main.pressure(hPa) ,visivility (m -> km)
 
